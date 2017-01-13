@@ -1,0 +1,43 @@
+body {
+	background-color: #013445;
+	}
+
+div {
+    width: 250px; /* On a indiqué une largeur (obligatoire) */
+    margin: auto; /* On peut donc demander à ce que le bloc soit centré avec auto */
+    /*border: 1px solid black;*/
+    text-align: justify;
+    padding: 12px;
+    margin-bottom: 20px;
+	Line-Height: 2;
+}
+
+@font-face {
+    font-family: 'PoliceConnexion';
+    src: url('theboldfont.ttf');
+}
+
+p {
+	font-family: 'PoliceConnexion';
+	font-size: 40px;
+	color: white;
+	text-align: center;
+}
+
+form {
+	text-align: center;
+}
+
+.button {
+    background-color: #EE2753;
+    border-radius: 4px;
+	border: none ;
+    color: white;
+    padding: 4px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	position:relative;
+	left:70%;
+}
