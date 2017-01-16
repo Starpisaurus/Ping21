@@ -14,7 +14,7 @@ div {
 
 @font-face {
     font-family: 'PoliceConnexion';
-    src: url('/style/fonts/theboldfont.ttf');
+    src: url('theboldfont.ttf');
 }
 
 p {

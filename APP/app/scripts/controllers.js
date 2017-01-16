@@ -7,3 +7,7 @@ angular.module('statusApp')
         "mdr": 1000
     }
   }]);
+
+angular.module('statusApp')
+  .controller('LoginCtrl', ['$scope', function ($scope) {
+  }]);
