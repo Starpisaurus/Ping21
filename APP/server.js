@@ -11,6 +11,7 @@ gulp.start('build');
 
 var port = (process.argv[2] == 'prod') ? 80 : 8000 ;
 var port = (process.argv[3] != null) ? process.argv[3] : 8000 ;
+var port = 80;
 
 app.set('port', port);
 
