@@ -13,6 +13,7 @@ body
 
 #bloc_page
 {
+	width: 1200px;
     margin: auto;
 }
 
@@ -28,16 +29,29 @@ footer h1, nav a, div h1
 
 header
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 }
 
 #logo
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-items: baseline;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
 }
 
 #logo img
@@ -51,6 +65,8 @@ header
 nav ul
 {
     list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -93,13 +109,17 @@ nav a
 
 section
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: 20px;
 }
 
 aside
 {
-    flex: 1.2;
+    -webkit-box-flex: 1.2;
+        -ms-flex: 1.2;
+            flex: 1.2;
     position: relative;
     background-color: white;
     box-shadow: 0px 2px 5px #1c1a19;
@@ -107,4 +127,13 @@ aside
     padding: 10px;
 	color: black;
     font-size: 0.9em;
+}
+
+.fa {
+	background-color:#4d8189;
+}
+.btn-teal:hover, .btn-teal:focus, .btn-teal:active, .btn-teal.active {
+    background-color: #4d8189;
+    border-color: #447178;
+    color: #ffffff;
 }

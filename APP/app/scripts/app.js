@@ -33,10 +33,6 @@ angular
         templateUrl: 'views/inscription.html',
         controller: 'RegisterCtrl'
       })
-        .when('/register', {
-        templateUrl: 'views/inscription.html',
-        controller: 'RegisterCtrl'
-      })
       .otherwise({
         redirectTo: '/'
       });

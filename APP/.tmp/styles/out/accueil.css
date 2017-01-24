@@ -1,7 +1,7 @@
 /*Police d'écriture */
 @font-face { 
     font-family: 'PoliceConnexion';
-    src: url('/resources/fonts/theboldfont.ttf');
+    src: url('../../resources/fonts/theboldfont.ttf');
 }
 
 /* Eléments principaux de la page */

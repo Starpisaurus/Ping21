@@ -11,3 +11,7 @@ angular.module('statusApp')
 angular.module('statusApp')
   .controller('LoginCtrl', ['$scope', function ($scope) {
   }]);
+
+angular.module('statusApp')
+  .controller('RegisterCtrl', ['$scope', function ($scope) {
+  }]);
