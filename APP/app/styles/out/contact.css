@@ -13,7 +13,7 @@ body
 
 #bloc_page
 {
-	width: 100%;
+	width: 1200px;
     margin: auto;
 }
 
@@ -94,9 +94,8 @@ nav a
 
 section
 {
-    display: block;
+    display: flex;
     margin-bottom: 20px;
-    max-width: 100%;
 }
 
 aside
@@ -109,5 +108,13 @@ aside
     padding: 10px;
 	color: black;
     font-size: 0.9em;
-    max-width: 100%;
+}
+
+.fa {
+	background-color:#4d8189;
+}
+.btn-teal:hover, .btn-teal:focus, .btn-teal:active, .btn-teal.active {
+    background-color: #4d8189;
+    border-color: #447178;
+    color: #ffffff;
 }

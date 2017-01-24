@@ -13,7 +13,7 @@ body
 
 #bloc_page
 {
-	width: 100%;
+	width: 1200px;
     margin: auto;
 }
 
@@ -94,9 +94,8 @@ nav a
 
 section
 {
-    display: block;
+    display: flex;
     margin-bottom: 20px;
-    max-width: 100%;
 }
 
 aside
@@ -109,5 +108,4 @@ aside
     padding: 10px;
 	color: black;
     font-size: 0.9em;
-    max-width: 100%;
 }
