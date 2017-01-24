@@ -1,8 +1,9 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient;
-var ipServer = "137.174.194.70";
+var ipServer = "vps363509.ovh.net";
 var databaseServer = "mongodb://" + ipServer + ":27017/musictoolkit";
+var sha1 = require('sha1');
 
 var app = express();
 
@@ -17,7 +18,7 @@ app.get('/', function (req, res) {
 
 });
 
-app.get('/register', function (req, res) {
+app.post('/register', function (req, res) {
     var user = {
         firstname: req.body.firstname,
         lastname: req.body.lastname,
@@ -32,10 +33,12 @@ app.get('/register', function (req, res) {
                 if (error) throw error;
                 if(results.length == 0){
                     db.collection("users").insert(user, function(error, results){
-                        
+                        res.send(200);
                     });
                 }                
             });
+        } else {
+            res.status(500).send(err);
         }
     });
 

@@ -1,11 +1,13 @@
 'use strict';
 
 angular.module('statusApp')
-  .controller('MainCtrl', ['$scope', function ($scope) {
-    $scope.strings = {
-        "lol": "1",
-        "mdr": 1000
+  .controller('MainCtrl', ['$scope', '$location', function ($scope, $location) {
+    $scope.toLogin = ()=>{
+        console.log("mdr");
+        $location.url("/login");
     }
+      
+      
   }]);
 
 angular.module('statusApp')

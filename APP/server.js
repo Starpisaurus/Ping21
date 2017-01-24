@@ -11,7 +11,6 @@ gulp.start('build');
 
 var port = (process.argv[2] == 'prod') ? 80 : 8000 ;
 var port = (process.argv[3] != null) ? process.argv[3] : 8000 ;
-var port = 80;
 
 app.set('port', port);
 
@@ -29,17 +28,20 @@ app.use(function(req, res, next) {
 // application -------------------------------------------------------------
 app.use(express.static(path.join(__dirname, 'app')));
 
+app.post('/status', function (req, res) {
+    res.status(200).send('OK');
+});
+
 app.all('/*', function(req, res, next) {
     // Just send the index.html for other files to support HTML5Mode
-    //res.sendFile('index.html', { root: path.join(__dirname, 'app') });
-    res.status(404).send();
+    res.sendFile('index.html', { root: path.join(__dirname, 'app') });
 });
 
 app.listen(app.get('port'), function(err, req, res, next) {
     if(err){
         console.log(err);
     } else {
-        console.log('Status server started @ ' + new Date() + ': http://localhost:' + app.get('port') + '/');
+        console.log('Server started @ ' + new Date() + ': http://localhost:' + app.get('port') + '/');
     }
     
 });
