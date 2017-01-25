@@ -36,4 +36,11 @@ router.post('/register', function (req, res) {
 
 });
 
+
+function bite(){
+    
+}
+
+
 module.exports = router;
+exports.bite = bite;
