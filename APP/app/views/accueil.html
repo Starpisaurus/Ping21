@@ -2,35 +2,92 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="../styles/out/index.css" />
-        <title>Accueil</title>
+        <link rel="stylesheet" href="../styles/out/contact.css"/>
+        <title>Index</title>
     </head>
     
     <body>
         <div id="bloc_page">
-            <header>
+            <div id="header">
 				<div id="logo">
 					<img src="../resources/images/Icone_blanc.png" alt="Logo Music Tool Blanc" />
 				</div>
                 
-                <nav>
+                <div id="nav">
                     <ul>
-                        <li><a href="accueil.html">Accueil</a></li>
-                        <li><a href="inscription.html">Inscription</a></li>
-                        <li><a ng-click="toLogin()">Connexion</a></li>
+                        <li><a href="inscription.html">S'inscrire</a></li>
+						<li><a href="connexion.html">Connexion</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
-                </nav>
-            </header>
-            
-            <div id="banniere">
-				<div id="banniere_nom">
-					<h1>Accueil</h1>
+                </div>
+            </div>
+           
+            <div id="section">
+                <div id="article">
+                    <img class="home" src="../resources/images/home.png" alt="Homme appli">
+                </div>
+                <div id="aside">
+					<div id=logo_blanc>
+						<img src="../resources/images/Logo_blanc.png" alt="Logo appli blanc">
+					</div>
+					<div id=slogan>
+						<p> Apprennez à jouer du piano, 
+						<br> de la guitare ou du ukulele</p>
+					</div>
+					<br>
+					<div id=logo_google>
+						<img src="../resources/images/google.PNG" alt="Logo Google play gris">
+					</div>
+				</div>
+            </div>
+			
+			<div id="symbole">
+				<img class="metronome" src="../resources/images/btnMetronome.png" alt="Icone metronome">
+				<img class="chord" src="../resources/images/btnChords.png" alt="Icone CHord Teacher">
+				<img class="jam" src="../resources/images/btnDrJam.png" alt="Icone Dr Jam">
+				<img class="playback" src="../resources/images/icon_playback_generator.png" alt="Icone Playback Generator">
+				<img class="accordeur" src="../resources/images/btnAccordeur.png" alt="Icone Tuner">
+			</div>
+			
+			<div id="block_blanc">
+                <div id="block_haut">
+					<div id="haut_droit">
+						<img class="metronome_2" src="../resources/images/btnMetronome.png" alt="Icone metronome">
+						<p> Metronome </p>
+						<img class="metronome_1" src="../resources/images/Metronome.png" alt="appli ihm metronome">
+					</div>
+					<div id="haut_gauche">
+						<img class="playback_2" src="../resources/images/icon_playback_generator.png" alt="Icone Playback Generator">
+						<p> Playback </p>
+						<img class="playback_1" src="../resources/images/Playback_Generator.png" alt="appli ihm playback generator">
+					</div>
+                </div>
+				<div id="block_bas">
+					<div id="bas_droit">
+						<img class="chord_2" src="../resources/images/btnChords.png" alt="Icone Chord Teacher">
+						<p> Chord Teacher </p>
+						<img class="chord_1" src="../resources/images/Chords_Teacher_ukulele.png" alt="chords ihm appli">
+					</div>
+					<div id="bas_gauche">
+						<img class="tuner_2" src="../resources/images/btnAccordeur.png" alt="Icone Tuner">
+						<p> Accordeur </p>
+						<img class="tuner_1" src="../resources/images/Accordeur_Chromatique.png" alt="accordeur ihm appli">
+					</div>
+                </div>
+				<div id="block_final">
+					<img class="jam_2" src="../resources/images/btnDrJam.png" alt="Icone Dr Jam">
+					<p> Dr Jam </p>
+					<img class="jam_1" src="../resources/images/Dr_Jam_playing.png" alt="dr jam ihm appli">
 				</div>
             </div>
             
-            <footer>
-            </footer>
+            <div id="footer">
+				<p> Essayez tout de suite </p>
+				<div id="logos">
+					<img src="../resources/images/GooglePlay_noir.png" alt="Logo Google play noir">
+					<input type="button" class="button" value="S'INSCRIRE" onclick="location.href='inscription.html';">
+				</div>
+            </div>
         </div>
     </body>
 </html>

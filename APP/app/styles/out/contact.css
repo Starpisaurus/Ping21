@@ -13,21 +13,21 @@ body
 
 #bloc_page
 {
-	width: 1200px;
+	width: 90%;
     margin: auto;
 }
 
 /*titre*/
-footer h1, nav a, div h1
+#nav a
 {
 	font-family: 'PoliceConnexion';
-	font-size: 40px;
+	font-size: 20px;
 	color: white;
 }
 
 /* Header */
 
-header
+#header
 {
     display: flex;
     justify-content: space-between;
@@ -43,28 +43,27 @@ header
 
 #logo img
 {
-    width: 59px;
-    height: 60px;
+    width: 8%;
 }
 
 /* Navigation : menu en haut */
 
-nav ul
+#nav ul
 {
     list-style-type: none;
     display: flex;
+	padding-right: 20%;
 }
 
-nav li
+#nav li
 {
-    margin-right: 15px;
+    margin-right: 10%;
 }
 
-nav a
+#nav a
 {
-    font-size: 16px;
     color: white;
-    padding-bottom: 3px;
+    padding-bottom: 5%;
     text-decoration: none;
 }
 
@@ -76,45 +75,253 @@ nav a
 }*/
 
 
-/* Bannière */
-
-#banniere_image
-{
-    margin-top: 15px;
-    position: relative;
-    margin-bottom: 25px;
-	
-}
-
-
-.banniere_nom{
-	position: relative;
-}
 /* Corps */
 
-section
+#section
 {
     display: flex;
-    margin-bottom: 20px;
+    margin-top: 4%;
 }
 
-aside
+.home{
+	width: 42%;
+	margin-left : 50%;
+}
+
+
+#article
+{
+    flex: 1.5;
+}
+
+#logo_blanc img{
+	width: 70%;
+}
+
+#slogan p
+{
+	margin-left : 15%;
+
+}
+
+#logo_google img
+{
+	width: 50%;
+	border-radius:20px;
+	margin-left : 10%;
+}
+
+#aside
 {
     flex: 1.2;
     position: relative;
-    background-color: white;
-    box-shadow: 0px 2px 5px #1c1a19;
-    border-radius: 5px;
-    padding: 10px;
-	color: black;
-    font-size: 0.9em;
+    padding: 2%;
+    color: white;
 }
 
-.fa {
-	background-color:#4d8189;
+#symbole
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 5%;
 }
-.btn-teal:hover, .btn-teal:focus, .btn-teal:active, .btn-teal.active {
-    background-color: #4d8189;
-    border-color: #447178;
-    color: #ffffff;
+
+.metronome
+{
+	width: 10%;
+	height: 10%;
 }
+
+.chord
+{
+	width: 10%;
+	height: 10%;	
+}
+
+.jam
+{
+	width: 10%;
+	height: 10%;	
+}
+
+.playback
+{
+	width: 10%;
+	height: 10%;	
+}
+
+.accordeur
+{
+	width: 10%;
+	height: 10%;	
+}
+
+#block_blanc
+{
+	margin-top: 5%;
+    margin-bottom: 4%;
+	color: black;
+	font-size: 0.9em;
+	border-radius: 5px;
+	background-color: white;
+}
+
+#block_haut
+{
+    display: flex;
+	flex-direction: row;
+}
+
+#block_blanc p
+{
+	font-family: 'PoliceConnexion';
+	font-size: 20px;
+	color: black;
+	text-align: center;
+	margin-top: 10%;
+}
+
+#haut_droit
+{
+	width: 35%;
+	margin-left: 10%;
+	margin-right: 5%;
+}
+
+.metronome_2
+{
+	float: left;
+	width: 30%
+}
+
+.metronome_1
+{
+	width:50%;
+}
+
+#haut_gauche
+{
+	width: 35%;
+	margin-left: 5%;
+	margin-right: 10%;
+}
+
+.playback_2
+{
+	float: left;
+	box-shadow: 10px #1c1a19;
+	width: 30%;
+}
+
+.playback_1
+{
+	width:50%;
+}
+
+#block_bas
+{
+    display: flex;
+	flex-direction: row;
+}
+
+#bas_droit
+{
+	width: 35%;
+	margin-left: 10%;
+	margin-right: 5%;
+}
+
+.chord_2
+{
+	float: left;
+	box-shadow: 10px #1c1a19;
+	width: 30%;
+}
+
+.chord_1
+{
+	width:50%;
+}
+	
+#bas_gauche
+{
+	width: 35%;
+	margin-left: 5%;
+	margin-right: 10%;
+}
+
+.tuner_2
+{
+	float: left;
+	box-shadow: 10px #1c1a19;
+	width: 30%;
+}
+
+.tuner_1
+{
+	width:50%;
+}
+
+#block_final
+{
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+.jam_2
+{
+	float: left;
+	box-shadow: 10px #1c1a19;
+	width: 14%;
+}
+
+.jam_1
+{
+	width: 60%;
+	height: 60%;
+	margin-left: 5%;
+	margin-bottom: 10%;
+}
+
+#footer p
+{
+	font-family: 'PoliceConnexion';
+	font-size: 40px;
+	color: white;
+	text-align: center ;
+}
+
+#logos
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-left: 30%;
+	margin-right: 30%;
+}
+
+#logos img
+{
+	width: 30%;
+	height: 30%;
+}
+
+.button {
+    background-color: #EE2753;
+    border-radius: 4px;
+	border: none ;
+    color: white;
+    padding: 4px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+	/*à modifier en fonction du texte */
+	/*c'est l'espace entre le texte et le bord du carré blanc*/
+	/*padding-top: 2%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+    padding-left: 5%;*/

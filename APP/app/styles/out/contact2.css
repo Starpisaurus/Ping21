@@ -1,0 +1,190 @@
+/*Police d'écriture */
+@font-face { 
+    font-family: 'PoliceConnexion';
+    src: url('../../resources/fonts/theboldfont.ttf');
+}
+
+@font-face {
+	font-family: 'Lato-Regular';
+    src: url('../../resources/fonts/Lato-Regular.ttf');
+}
+
+/* Eléments principaux de la page */
+
+body
+{
+    background: #013445;
+}
+
+#bloc_page
+{
+	width: 90%;
+    margin: auto;
+}
+
+/*titre*/
+#footer h1, #nav a, div h1
+{
+	font-family: 'PoliceConnexion';
+	font-size: 40px;
+	color: white;
+}
+
+/* Header */
+
+#header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#logo img
+{
+    width: 8%;
+}
+
+/* Navigation : menu en haut */
+
+#nav ul
+{
+    list-style-type: none;
+    display: flex;
+	padding-right: 20%;
+}
+
+#nav li
+{
+    margin-right: 10%;
+}
+
+#nav a
+{
+    font-size: 16px;
+    color: white;
+    padding-bottom: 5%;
+    text-decoration: none;
+}
+
+/*changement de style passage souris */
+/*nav a:hover
+{
+    color: #760001;
+    border-bottom: 3px solid #760001;
+}*/
+
+
+/* Bannière */
+
+#banniere_nom h1
+{
+	position: relative;
+	margin-left: 10%;
+}
+/* Corps */
+
+#section
+{
+    display: flex;
+    margin-bottom: 4%;
+}
+
+#article
+{
+    flex: 1.2;
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+	color: black;
+    font-size: 0.9em;
+	/*a modifier en fonction du texte */
+	/*c'est l'espace entre le texte et le bord du carré blanc*/
+	padding-top: 1%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+}
+
+#texte p
+{
+	font-family: 'Lato-Regular';
+	font-size: 17px;
+	color: grey;
+}
+
+#logos
+{
+	display: flex;
+	margin-bottom: 2%;
+}
+
+#twitter img
+{
+	width: 40%;
+}
+
+#fb img
+{
+	width: 20%;
+}
+
+#form
+{
+	display: flex;
+	flex-direction: column;
+	margin-right: 60%;
+}
+
+.nom
+{
+	background-color: #E6E6E6;
+	border: none ;
+	height:40px;
+	margin-bottom: 2%;
+}
+
+.mail
+{
+	background-color: #E6E6E6;
+	border: none ;
+	height:40px;
+	margin-bottom: 2%;
+}
+
+.message
+{
+	background-color: #E6E6E6;
+	border: none ;
+	height:120px;
+	margin-bottom: 2%;
+}
+
+.button {
+    background-color: #EE2753;
+    border-radius: 4px;
+	border: none ;
+    color: white;
+    padding: 4px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	margin-left: 30%;
+	left:70%;
+}
+
+.fa {
+	background-color:#4d8189;
+}
+.btn-teal:hover, .btn-teal:focus, .btn-teal:active, .btn-teal.active {
+    background-color: #4d8189;
+    border-color: #447178;
+    color: #ffffff;
+}
