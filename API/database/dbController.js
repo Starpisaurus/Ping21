@@ -1,16 +1,12 @@
 'use strict'
 
 var express = require('express');
-var router = express.Router();
+var MongoClient = require('mongodb').MongoClient;
+var ipServer = "localhost";
+var databaseServer = "mongodb://" + ipServer + ":27017/musictoolkit";
+var sha1 = require('sha1');
 
-router.post('/register', function (req, res) {
-    var user = {
-        firstname: req.body.firstname,
-        lastname: req.body.lastname,
-        register_date: new Date(),
-        email: req.body.email,
-        password: sha1(req.body.password)
-    };
+function addUser(user){
 
     MongoClient.connect(databaseServer, function (err, db) {
         if (!err) {
@@ -32,7 +28,40 @@ router.post('/register', function (req, res) {
             console.log(err);
         }
     });
+    
+}
 
-});
+function findUser(user){
+    
+    var ret = {};
+    
+    MongoClient.connect(databaseServer, function (err, db) {
+        if (!err) {
+            db.collection("siteUsers").find({email: user.email}).toArray(function (error, results) {
+                if (error) throw error;
+                console.log(results);
+                if(results.length == 1){
+                    if(sha1(results[0].password))
+                    {password: user.password}
+                    ret.status = 200;
+                    
+                }
+                else{
+                    console.log("User doesn't exists or wrong password !")
+                    console.log(results);
+                    ret.status = 401;
+                    
+                }
+            });
+        } else {
+            ret.status = 500;
+            ret.error = err;
+            console.log(err);
+        }
 
-module.exports = router;
+    });
+    return ret;
+}
+
+exports.addUser = addUser;
+exports.findUser = findUser;

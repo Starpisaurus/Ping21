@@ -1,13 +1,11 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var MongoClient = require('mongodb').MongoClient;
-var ipServer = "localhost";
-var databaseServer = "mongodb://" + ipServer + ":27017/musictoolkit";
-var sha1 = require('sha1');
+
+
 
 //Controllers
-//var dbController = require('./ctrl/dbController.js');
-var usersController = require('./ctrl/usersController.js');
+var dbController = require('./database/dbController.js');
+var usersController = require('./routes/usersController.js');
 
 var app = express();
 
