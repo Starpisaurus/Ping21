@@ -1,2 +1,7 @@
-APP/node_modules
-APP/app/bower_components
+ APP/node_modules
+ APP/app/bower_components 
+ APP/dist
+ .gitignore
+ APP/app/scripts/test.js
+ APP/app/styles/out/score.css
+ APP/app/views/score.html
