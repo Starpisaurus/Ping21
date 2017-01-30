@@ -15,6 +15,8 @@ angular.module('statusApp')
             email: "",
             password: ""
         }
+        
+        $scope.loginError = "";
 
         $scope.attempLogin = function () {
             console.log('entrée');
@@ -26,7 +28,9 @@ angular.module('statusApp')
 
                 HttpUtils.request('POST', 'http://localhost:3333/users/login', $scope.user).then(
                     function  (data) {
-                        console.log("mdr lol batard : ");
+                        
+                        console.log(data);
+                    }, function (error){
                         console.log(data);
                     });
 

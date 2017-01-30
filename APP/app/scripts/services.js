@@ -21,10 +21,10 @@ angular.module('statusApp')
                     deferred.resolve(data);
                 },
                 function errorCallback(data, status, headers, config) {
-                    console.log(data);
+                deferred.reject(status);
                 });
 
-            return deferred.promise;
+            return deferred.promise; 
         }
 
         return {

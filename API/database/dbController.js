@@ -77,33 +77,17 @@ function findUser(user, callback) {
     };
 
     MongoClient.connect(databaseServer, function (err, db) {
-        if (!err) {
+        if (err) return funcCallback(err);
+        
             db.collection("siteUsers").find({
                 email: user.email
-            }).toArray(function (error, results) {
-                if (error) throw error;
-                console.log(results);
-                if (results.length == 1) {
-                    if (sha1(results[0].password) == user.password) {
-                        ret.status = 200;
-                    } else {
-                        console.log('Password incorrect');
-                    }
-                } else {
-                    console.log("User doesn't exists in database")
-                    ret.status = 401;
-
-                }
+            }).toArray(function (error, result){
+                if(error) throw error;
+                callback(result);
             });
-        } else {
-            ret.status = 500;
-            ret.error = err;
-            console.log(err);
-        }
-
     });
     console.log(ret);
-    callback(ret);
+
 }
 
 exports.addUser = addUser;

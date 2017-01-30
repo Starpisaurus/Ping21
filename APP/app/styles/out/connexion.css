@@ -3,7 +3,6 @@ body {
 	}
 
 div {
-    width: 250px; /* On a indiqué une largeur (obligatoire) */
     margin: auto; /* On peut donc demander à ce que le bloc soit centré avec auto */
     /*border: 1px solid black;*/
     text-align: justify;
@@ -40,4 +39,8 @@ form {
     font-size: 16px;
 	position:relative;
 	left:70%;
+}
+
+.error {
+    color:red;
 }

@@ -41,3 +41,7 @@ form {
 	position:relative;
 	left:70%;
 }
+
+.error {
+    color:red;
+}

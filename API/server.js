@@ -13,20 +13,22 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-app.use('/users', usersController);
+
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Credentials', true);
-    res.header('Access-Control-Allow-Origin', "*");
+    res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header('Access-Control-Allow-Headers', 'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept');
     next();
 });
 
-app.get('/', function (req, res) {
+/*app.get('/', function (req, res) {
     res.setHeader('Content-Type', 'text/plain');
     res.end('Bienvenue sur l\'API du site de MusikToolKit');
 
-});
+});*/
+
+app.use('/users', usersController);
 
 app.listen(3333);
 
