@@ -1,0 +1,36 @@
+body
+{
+    background: #013445;
+}
+
+@font-face { 
+    font-family: 'PoliceConnexion';
+    src: url('theboldfont.ttf');
+}
+
+h1
+{
+	font-family: 'PoliceConnexion';
+	font-size: 40px;
+	color: white;
+	text-align: center;
+
+}
+
+a
+{
+    color: red;
+}
+
+p{
+	color: white;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.logo{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+ 

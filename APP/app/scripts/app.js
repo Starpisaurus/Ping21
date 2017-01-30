@@ -32,8 +32,15 @@ angular
                 templateUrl: 'views/inscription.html',
                 controller: 'RegisterCtrl'
             })
+            .when('/indexConnect', {
+                templateUrl: 'views/indexconnect.html',
+                //controller: 'RegisterCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });
-    $locationProvider.html5Mode({ enabled: true, requireBase: false });
+        $locationProvider.html5Mode({
+            enabled: true,
+            requireBase: false
+        });
     });

@@ -1,16 +1,6 @@
 body {
 	background-color: #013445;
 	}
-
-div {
-    margin: auto; /* On peut donc demander à ce que le bloc soit centré avec auto */
-    /*border: 1px solid black;*/
-    text-align: justify;
-    padding: 12px;
-    margin-bottom: 20px;
-	Line-Height: 2;
-}
-
 @font-face {
     font-family: 'PoliceConnexion';
     src: url('../../resources/fonts/theboldfont.ttf');
@@ -39,8 +29,4 @@ form {
     font-size: 16px;
 	position:relative;
 	left:70%;
-}
-
-.error {
-    color:red;
 }

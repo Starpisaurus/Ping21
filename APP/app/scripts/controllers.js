@@ -10,7 +10,7 @@ angular.module('statusApp')
   }]);
 
 angular.module('statusApp')
-    .controller('LoginCtrl', ['$scope', 'HttpUtils', function ($scope, HttpUtils) {
+    .controller('LoginCtrl', ['$scope', 'HttpUtils', '$location', function ($scope, HttpUtils, $location) {
         $scope.user = {
             email: "",
             password: ""
@@ -28,10 +28,11 @@ angular.module('statusApp')
 
                 HttpUtils.request('POST', 'http://localhost:3333/users/login', $scope.user).then(
                     function  (data) {
-                        
-                        console.log(data);
+                        if(data.status==200){
+                            $location.path('/indexConnect')
+                        }
                     }, function (error){
-                        console.log(data);
+                        console.log(error);
                     });
 
             }
