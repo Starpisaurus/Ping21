@@ -1,19 +1,38 @@
 'use strict';
 
 angular.module('statusApp')
-  .controller('MainCtrl', ['$scope', '$location', function ($scope, $location) {
-    $scope.toLogin = ()=>{
-        console.log("mdr");
-        $location.url("/login");
-    }
-      
-      
+    .controller('MainCtrl', ['$scope', '$location', function ($scope, $location) {
+        $scope.toLogin = () => {
+            $location.url("/login");
+        }
+
+
   }]);
 
 angular.module('statusApp')
-  .controller('LoginCtrl', ['$scope', function ($scope) {
-  }]);
+    .controller('LoginCtrl', ['$scope', 'HttpUtils', function ($scope, HttpUtils) {
+        $scope.user = {
+            email: "",
+            password: ""
+        }
+
+        $scope.attempLogin = function () {
+            console.log('entrée');
+            if ($scope.user) {
+                console.log($scope.user);
+                //var deferred = $q.defer();
+
+                //var config = Utils.getHttpConfig('POST', Utils.getApiRoot() + '/user/login', /*User.getUser().token*/null, null, data);
+
+                HttpUtils.request('POST', 'http://localhost:3333/users/login', $scope.user).then(
+                    function  (data) {
+                        console.log("mdr lol batard : ");
+                        console.log(data);
+                    });
+
+            }
+        }
+      }]);
 
 angular.module('statusApp')
-  .controller('RegisterCtrl', ['$scope', function ($scope) {
-  }]);
+    .controller('RegisterCtrl', ['$scope', function ($scope) {}]);

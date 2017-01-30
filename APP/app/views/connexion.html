@@ -4,10 +4,10 @@
     <section class="loginform cf">
         <form name="login" action="index_submit" method="get" accept-charset="utf-8">
             <label for="usermail"></label>
-            <input type="email" name="usermail" placeholder="PSEUDO" required>
+            <input type="text" name="usermail" placeholder="PSEUDO" required data-ng-model="user.email">
             <label for="password"></label>
-            <input type="password" name="password" placeholder="MOT DE PASSE" required>
+            <input type="password" name="password" placeholder="MOT DE PASSE" required data-ng-model="user.password">
         </form>
     </section>
-    <input type="button" class="button" value="VALIDER">
+    <input type="button" class="button" value="VALIDER" data-ng-click="attempLogin()">
 </div>

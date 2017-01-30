@@ -24,11 +24,15 @@ router.post('/login', function (req, res){
        password: sha1(req.body.password)
    };
     
-    var ret = dbController.findUser(user);
-    console.log(ret);
-    if(ret && ret.status){
-        res.status(ret.status).send();
-    }
+    dbController.findUser(user, function(result) { 
+        console.log(result);
+        if(result && result.status){
+            console.log('ouiiiiiiiiiii');
+            res.status(result.status).send();
+        }
+    });
+    //console.log(result);
+
 });
 
 
