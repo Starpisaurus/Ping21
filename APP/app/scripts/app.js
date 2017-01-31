@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name statusApp
+ * @name musicToolKitApp
  * @description
- * # statusApp
+ * # musicToolKitApp
  *
  * Main module of the application.
  */
 angular
-    .module('statusApp', [
+    .module('musicToolKitApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -32,7 +32,7 @@ angular
                 templateUrl: 'views/inscription.html',
                 controller: 'RegisterCtrl'
             })
-            .when('/indexConnect', {
+            .when('/indexConnected', {
                 templateUrl: 'views/indexconnect.html',
                 //controller: 'RegisterCtrl'
             })

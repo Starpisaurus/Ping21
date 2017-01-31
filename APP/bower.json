@@ -14,5 +14,5 @@
     "angular-mocks": "^1.4.0"
   },
   "appPath": "app",
-  "moduleName": "statusApp"
+  "moduleName": "musicToolKitApp"
 }

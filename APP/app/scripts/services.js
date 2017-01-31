@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('statusApp')
+angular.module('musicToolKitApp')
     .service('HttpUtils', ['$q', '$http', function ($q, $http) {
         function request(method, url, data) {
             var header = {
