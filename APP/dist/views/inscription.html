@@ -1,17 +1,14 @@
-		<img src="../resources/images/Logo_blanc.png" alt="Logo Music Tool" width="222"	height="143"> 
-		<div id="conteneur">
-			<p> INSCRIPTION </p>
-				<section class="loginform cf">
-				<form name="login" action="index_submit" method="get" accept-charset="utf-8">
-					<label for="usermail"></label>
-					<input type="email" name="usermail" placeholder="MAIL" required>
-					<label for="password"></label>
-					<input type="pseudo" name="pseudo" placeholder="PSEUDO" required>
-					<label for="usermail"></label>
-					<input type="password" name="password" placeholder="MOT DE PASSE" required>
-					<label for="usermail"></label>
-					<input type="password" name="password" placeholder="CONFIRMATION DE MOT DE PASSE" required>	
-				</form>
-				</section>
-				<input type="button" class="button" value="VALIDER">
-		</div>
+<img src="../resources/images/Logo_blanc.png" alt="Logo Music Tool" width="222" height="143">
+<div id="conteneur" class="form-block">
+    <p id="title"> INSCRIPTION </p>
+        <form name="register" method="post"  ng-submit="attempRegister()" accept-charset="utf-8">
+            <input class="lineTextField" type="text" name="firstname" placeholder="Prenom" required  ng-model="firstname">
+            <input class="lineTextField" type="test" name="lastname" placeholder="Nom" required  ng-model="lastname">
+            <input class="lineTextField" type="email" name="usermail" placeholder="Mail" required  ng-model="email">
+            <input class="lineTextField" type="pseudo" name="pseudo" placeholder="Pseudo" required  ng-model="login">
+            <input class="lineTextField" type="password" name="password" placeholder="Mot de passe" required  ng-model="password">
+            <input class="lineTextField" type="password" name="password" placeholder="Confirmation de mot de passe" required  ng-model="errorTest" equals-to="password">
+            <input id="submit" type="submit" class="button" value="VALIDER"  ng-disabled="register.$invalid">
+        </form>
+    <div>{{errorTest}}</div>
+</div>

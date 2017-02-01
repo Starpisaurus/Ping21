@@ -1,16 +1,15 @@
 <img src="../resources/images/Logo_blanc.png" alt="Logo Music Tool" width="222" height="143">
-<div class="login-block">
+<div class="form-block">
     <p id="title"> CONNEXION </p>
-        <form name="login" data-ng-submit="attempLogin()">
+        <form name="login" method="post"  ng-submit="attempLogin()">
             <label for="usermail"></label>
-            <input type="text" name="usermail" placeholder="Pseudo" required data-ng-model="user.email">
+            <input class="lineTextField" type="text" name="usermail" placeholder="Pseudo" required  ng-model="user.email">
             <label class="error"></label>
             <label for="password"></label>
-            <input type="password" name="password" placeholder="Mot de passe" required data-ng-model="user.password">
+            <input class="lineTextField" type="password" name="password" placeholder="Mot de passe" required  ng-model="user.password">
             <label class="error"></label>
             <input id="submit" type="submit" class="button" value="VALIDER">
         </form>
-    <div class="error">
-        {{loginError}}
+    <div class="error" ng-show="">
     </div>
 </div>

@@ -16,7 +16,7 @@ function addUser(user) {
             }).toArray(function (error, results) {
                 if (error) throw error;
                 if (results.length == 0) {
-                    db.collection("users").insert(user, {
+                    db.collection("siteUsers").insert(user, {
                         upsert: true
                     }, function (error, results) {
                         //res.status(200).send();

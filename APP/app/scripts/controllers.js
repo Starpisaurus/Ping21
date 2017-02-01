@@ -22,7 +22,7 @@ angular.module('musicToolKitApp')
                 HttpUtils.request('POST', apiUrl + '/users/login', $scope.user).then(
                     function (data) {
                         if (data.status == 200) {
-                            $location.path('/indexConnect');
+                            $location.path('/indexConnected');
                         } else {
                             $scope.loginError = "Wrong password or incorrect user !";
                         }
@@ -43,18 +43,13 @@ angular.module('musicToolKitApp')
             firstname: "",
             lastname: "",
             login: "",
-            confirm_password: ""
         }
 
         $scope.attempRegister = function () {
             if ($scope.newUser) {
-                if ($scope.newUser.password == $scope.newUser.confirm_password) {
-
+                            
+                                $scope.newUser.password = $scope.register.password.$viewValue;
                                 HttpUtils.request('POST', apiUrl + '/users/register', $scope.newUser);
-                }
-                else{
-                    $scope.error = "Les deux mots de passe doivent être égaux !";
-                }
             }
         }
     }]);
