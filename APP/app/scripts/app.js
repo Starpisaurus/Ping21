@@ -10,12 +10,12 @@
  */
 angular
     .module('musicToolKitApp', [
-    'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ngAnimate'
   ])
     .config(function ($routeProvider, $locationProvider) {
         $locationProvider.hashPrefix();
@@ -34,7 +34,6 @@ angular
             })
             .when('/indexConnected', {
                 templateUrl: 'views/indexconnect.html',
-                //controller: 'RegisterCtrl'
             })
             .otherwise({
                 redirectTo: '/'

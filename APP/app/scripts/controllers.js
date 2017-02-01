@@ -1,11 +1,10 @@
 'use strict';
 
+var apiUrl = "http://localhost:3333";
+
 angular.module('musicToolKitApp')
     .controller('MainCtrl', ['$scope', '$location', function ($scope, $location) {
-        $scope.toLogin = () => {
-            $location.url("/login");
-        }
-
+        $location.url("/login");
 
   }]);
 
@@ -15,24 +14,20 @@ angular.module('musicToolKitApp')
             email: "",
             password: ""
         }
-        
+
         $scope.loginError = "";
 
         $scope.attempLogin = function () {
             if ($scope.user) {
-                //var deferred = $q.defer();
-
-                //var config = Utils.getHttpConfig('POST', Utils.getApiRoot() + '/user/login', /*User.getUser().token*/null, null, data);
-
-                HttpUtils.request('POST', 'http://localhost:3333/users/login', $scope.user).then(
-                    function  (data) {
-                        if(data.status==200){
+                HttpUtils.request('POST', apiUrl + '/users/login', $scope.user).then(
+                    function (data) {
+                        if (data.status == 200) {
                             $location.path('/indexConnect');
-                        }
-                        else{
+                        } else {
                             $scope.loginError = "Wrong password or incorrect user !";
                         }
-                    }, function (error){
+                    },
+                    function (error) {
                         console.log(error);
                     });
 
@@ -41,4 +36,25 @@ angular.module('musicToolKitApp')
       }]);
 
 angular.module('musicToolKitApp')
-    .controller('RegisterCtrl', ['$scope', function ($scope) {}]);
+    .controller('RegisterCtrl', ['$scope', 'HttpUtils', '$location', function ($scope, HttpUtils, $location) {
+        $scope.newUser = {
+            email: "",
+            password: "",
+            firstname: "",
+            lastname: "",
+            login: "",
+            confirm_password: ""
+        }
+
+        $scope.attempRegister = function () {
+            if ($scope.newUser) {
+                if ($scope.newUser.password == $scope.newUser.confirm_password) {
+
+                                HttpUtils.request('POST', apiUrl + '/users/register', $scope.newUser);
+                }
+                else{
+                    $scope.error = "Les deux mots de passe doivent être égaux !";
+                }
+            }
+        }
+    }]);
