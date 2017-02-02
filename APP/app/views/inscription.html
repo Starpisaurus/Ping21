@@ -6,10 +6,15 @@
             <!-- içi, register c'est le formulaire, firsname, c'est le nom de l'input concerné, $invalid est un booléen qui représente l'invalidité du champs et $dirty un autre booléen qui false si l'utilisateur n'a rien fait, true, si une action a deja été faite -->
             <div class="error" ng-show="register.firstname.$invalid && register.firstname.$dirty">Ce champs ne doit pas être vide !!!</div>
             <input class="lineTextField" type="test" name="lastname" placeholder="Nom" required  ng-model="newUser.lastname">
+            <div class="error" ng-show="register.lastname.$invalid && register.lastname.$dirty">Ce champs ne doit pas être vide !!!</div>
             <input class="lineTextField" type="email" name="usermail" placeholder="Mail" required  ng-model="newUser.email">
+            <div class="error" ng-show="register.usermail.$invalid && register.usermail.$dirty">Votre adresse email doit être valide !!!</div>
             <input class="lineTextField" type="pseudo" name="pseudo" placeholder="Pseudo" required  ng-model="newUser.login">
+            <div class="error" ng-show="register.pseudo.$invalid && register.pseudo.$dirty">Ce champs ne doit pas être vide !!!</div>
             <input class="lineTextField" type="password" name="password" placeholder="Mot de passe" required  ng-model="password">
-            <input class="lineTextField" type="password" name="password" placeholder="Confirmation de mot de passe" required  ng-model="confirmPassword" equals-to="password">
+            <div class="error" ng-show="register.password.$invalid && register.password.$dirty">Ce champs ne doit pas être vide !!!</div>
+            <input class="lineTextField" type="password" name="confirmPassword" placeholder="Confirmation de mot de passe" required  ng-model="confirmPassword" equals-to="password">
+            <div class="error" ng-show="register.confirmPassword.$invalid && register.confirmPassword.$dirty">Les mots de passe ne sont pas les mêmes</div>
             <input id="submit" type="submit" class="button" value="VALIDER"  ng-disabled="register.$invalid">
         </form>
     <div style="display:none;" ng-show="register.$dirty">{{register.$error}}</div>
