@@ -16,6 +16,5 @@
             <input class="lineTextField" type="password" name="confirmPassword" placeholder="Confirmation de mot de passe" required  ng-model="confirmPassword" equals-to="password">
             <div class="error" ng-show="register.confirmPassword.$invalid && register.confirmPassword.$dirty">Les mots de passe ne sont pas les mêmes</div>
             <input id="submit" type="submit" class="button" value="VALIDER"  ng-disabled="register.$invalid">
-        </form>
-    <div style="display:none;" ng-show="register.$dirty">{{register.$error}}</div>
+    </form>
 </div>

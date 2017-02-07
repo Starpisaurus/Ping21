@@ -2,12 +2,8 @@
 <div class="form-block">
     <p id="title"> CONNEXION </p>
         <form name="login" method="post"  ng-submit="attempLogin()">
-            <label for="usermail"></label>
             <input class="lineTextField" type="text" name="usermail" placeholder="Pseudo" required  ng-model="user.email">
-            <label class="error"></label>
-            <label for="password"></label>
             <input class="lineTextField" type="password" name="password" placeholder="Mot de passe" required  ng-model="user.password">
-            <label class="error"></label>
             <input id="submit" type="submit" class="button" value="VALIDER">
         </form>
     <div class="error" ng-show="">
