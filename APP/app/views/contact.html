@@ -1,33 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../styles/css_nadege/contact.css" />
+        <title>Contact</title>
+    </head>
+    
+    <body>
         <div id="bloc_page">
-            <header>
+            <div id="header">
 				<div id="logo">
 					<img src="../resources/images/Icone_blanc.png" alt="Logo Music Tool Blanc" />
 				</div>
                 
-                <nav>
+                <div id="nav">
                     <ul>
-                        <li><a href="accueil.html">Accueil</a></li>
+                        <li><a href="index.html">Accueil</a></li>
                         <li><a href="inscription.html">Inscription</a></li>
-                        <li><a href="connexion.html">Connexion</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        <li><a href="connexion.html">Connexion</a></li>
                     </ul>
-                </nav>
-            </header>
+                </div>
+            </div>
             
             <div id="banniere">
 				<div id="banniere_nom">
-					<h1>Nom user</h1>
+					<h1>Contactez nous</h1>
 				</div>
 			</div>
             
-            <section>
-                <article>
-                </article>
-                <aside>
-					<p> Voilà </p>
-                </aside>
-            </section>
+            <div id="section">
+                <div id="article">              
+					<div id="texte">
+						<p> Une remarque, un renseignement ou une suggestion ?
+						<br> Tous les moyens sont bons pour nous contacter.</p>
+					</div>
+					<div id="logos">
+						<div id="twitter">
+							<img src="../resources/images/twitter_icon.png" alt="Logo Twitter rose rond" />
+						</div>
+						<div id="fb">
+							<img src="../resources/images/fb_icon.png" alt="Logo FB rose rond" />
+						</div>
+					</div>
+					<div id="form" name="login" action="index_submit" method="get" accept-charset="utf-8">
+						<label for="nom"></label>
+						<input class="nom" type="text" name="nom" placeholder="    Nom" required>
+						<label for="usermail"></label>
+						<input class="mail" type="email" name="usermail" placeholder="    Mail" required>
+						<label for="message"></label>
+						<input class="message" type="text" name="message" placeholder="    Message" required>
+					</div>
+					<input type="button" class="button" value="REPONDEZ MOI">
+				</div>
+            </div>
             
-            <footer>
-            </footer>
+            <div id="footer">
+            </div>
         </div>
+    </body>
+</html>
