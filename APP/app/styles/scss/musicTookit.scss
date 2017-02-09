@@ -17,8 +17,8 @@ body {
 a {
     color: white;
     text-decoration: none;
-    :hover{
-        color:white;
+    :hover {
+        color: white;
     }
 }
 
@@ -47,20 +47,74 @@ a {
     padding: 0;
 }
 
-.img {
-    width: 100%;
+img {
+    max-width: 100%
 }
 
+.row {
+    max-width:100%
+}
+
+.firstBan{
+    margin:0 25% 0 25%;
+    width:100%;
+    #left, #right{
+        width:25%;
+        vertical-align: top;
+    }
+}
+
+.textCenter{
+    margin:auto;
+    text-align: center;
+}
+
+    .title {
+        width: 100%;
+        font-size: 41px;
+        margin: 0;
+        text-align: center;
+    }
+.homeImg{
+    max-width:100%;
+    max-height: 600px;
+}
+
+.inlineBlock{
+    display: inline-block;
+}
+.navigation{
+    position:absolute;
+    right: 5%;
+    top: 10%;
+    font-size: 25px;
+    ul{
+        margin:0 10px 0 10px;
+    }
+}
 ul {
     list-style: none;
-    li{
+    li {
         display: inline;
     }
 }
 
+
+
 .logo {
-    width: 60px;
-    height: 60px;
+        width: 250px;
+        height: auto;
+}
+
+@media screen and (max-width: 720px) {
+    .logo {
+        width: 60px !important;
+        height: 60px;
+    }
+    .logoContainer{
+        width:100%;
+        display:block;
+    }
 }
 
 #submit {

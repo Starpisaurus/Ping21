@@ -4,7 +4,7 @@ var apiUrl = "http://localhost:3333";
 
 angular.module('musicToolKitApp')
     .controller('MainCtrl', ['$scope', '$location', function ($scope, $location) {
-        $location.url("/login");
+        //$location.url("/login");
 
   }]);
 

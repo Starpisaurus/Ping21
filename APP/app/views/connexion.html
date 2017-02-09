@@ -1,11 +1,13 @@
-<img src="../resources/images/Logo_blanc.png" alt="Logo Music Tool" width="222" height="143">
+<a ng-href="/">
+    <img src="../resources/images/Logo_blanc.png" class="logo" alt="Logo Music Tool">
+</a>
 <div class="form-block">
     <p id="title"> CONNEXION </p>
-        <form name="login" method="post"  ng-submit="attempLogin()">
-            <input class="lineTextField" type="text" name="usermail" placeholder="Pseudo" required  ng-model="user.email">
-            <input class="lineTextField" type="password" name="password" placeholder="Mot de passe" required  ng-model="user.password">
-            <input id="submit" type="submit" class="button" value="VALIDER">
-        </form>
+    <form name="login" method="post" ng-submit="attempLogin()">
+        <input class="lineTextField" type="text" name="usermail" placeholder="Pseudo" required ng-model="user.email">
+        <input class="lineTextField" type="password" name="password" placeholder="Mot de passe" required ng-model="user.password">
+        <input id="submit" type="submit" class="button" value="VALIDER">
+    </form>
     <div class="error" ng-show="">
     </div>
 </div>

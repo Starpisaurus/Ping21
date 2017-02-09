@@ -8,7 +8,8 @@
     "body-parser": "^1.15.2",
     "ejs": "^2.5.5",
     "express": "^4.14.0",
-    "mongodb": "^2.2.22"
+    "mongodb": "^2.2.22",
+    "sha1": "^1.1.1"
   },
   "devDependencies": {},
   "scripts": {

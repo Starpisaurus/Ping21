@@ -38,8 +38,43 @@ a {
   border: 0;
   padding: 0; }
 
-.img {
+img {
+  max-width: 100%; }
+
+.row {
+  max-width: 100%; }
+
+.firstBan {
+  margin: 0 25% 0 25%;
   width: 100%; }
+  .firstBan #left, .firstBan #right {
+    width: 25%;
+    vertical-align: top; }
+
+.textCenter {
+  margin: auto;
+  text-align: center; }
+
+.title {
+  width: 100%;
+  font-size: 41px;
+  margin: 0;
+  text-align: center; }
+
+.homeImg {
+  max-width: 100%;
+  max-height: 600px; }
+
+.inlineBlock {
+  display: inline-block; }
+
+.navigation {
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  font-size: 25px; }
+  .navigation ul {
+    margin: 0 10px 0 10px; }
 
 ul {
   list-style: none; }
@@ -47,9 +82,17 @@ ul {
     display: inline; }
 
 .logo {
-  width: 60px;
-  height: 60px; }
+  width: 250px;
+  height: auto; }
 
+@media screen and (max-width: 720px) {
+  .logo {
+    width: 60px !important;
+    height: 60px; }
+
+  .logoContainer {
+    width: 100%;
+    display: block; } }
 #submit {
   height: auto; }
   #submit :hover {
