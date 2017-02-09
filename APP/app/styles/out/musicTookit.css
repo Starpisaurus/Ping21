@@ -7,8 +7,29 @@
 body {
   background-color: #013445;
   font-family: Latin;
-  color: white; }
+  color: white;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0; }
 
+#icon_home {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  margin-top: 100px; }
+  #icon_home .largeIcon {
+    display: inline-block;
+    margin: 50px; }
+  #icon_home .title {
+    margin-bottom: 50px; }
+
+#guitare {
+  position: relative;
+  top: -80%; }
+
+@media screen and (max-width: 743px) {
+  #guitare {
+    display: none; } }
 a {
   color: white;
   text-decoration: none; }
@@ -26,6 +47,10 @@ a {
   font-size: 16px;
   position: relative;
   right: 0; }
+
+.largeButton {
+  font-size: 35px;
+  padding: 15px 45px; }
 
 .lineTextField {
   display: block;
@@ -47,7 +72,8 @@ img {
 .firstBan {
   margin: 0 25% 0 25%;
   width: 100%; }
-  .firstBan #left, .firstBan #right {
+  .firstBan #left,
+  .firstBan #right {
     width: 25%;
     vertical-align: top; }
 
@@ -85,6 +111,13 @@ ul {
   width: 250px;
   height: auto; }
 
+#fonctionnalites {
+  text-align: center; }
+
+#box-footer {
+  text-align: center;
+  margin-bottom: 50px; }
+
 @media screen and (max-width: 720px) {
   .logo {
     width: 60px !important;
@@ -92,7 +125,13 @@ ul {
 
   .logoContainer {
     width: 100%;
-    display: block; } }
+    display: block; }
+
+  #bloc-page {
+    margin-bottom: 100px; }
+
+  .largeIcon {
+    margin: 25px; } }
 #submit {
   height: auto; }
   #submit :hover {

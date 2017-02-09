@@ -1,25 +1,128 @@
-        <div id="bloc_page">
-            <header>
-				<div id="logo">
-					<img src="../resources/images/Icone_blanc.png" alt="Logo Music Tool Blanc" />
-				</div>
-                
-                <nav>
-                    <ul>
-                        <li><a href="/">Accueil</a></li>
-                        <li><a href="/register">Inscription</a></li>
-                        <li><a href="/login">Connexion</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
-            
-            <div id="banniere">
-				<div id="banniere_nom">
-					<h1>Accueil</h1>
-				</div>
-            </div>
-            
-            <footer>
-            </footer>
+<div id="bloc_page">
+    <div id="logo">
+        <a ng-href="/">
+            <img class="logo" src="../resources/images/Icone_blanc.png" alt="Logo Music Tool Blanc" />
+        </a>
+    </div>
+
+    <nav class="navigation">
+        <ul>
+            <li><a ng-href="/">Accueil</a></li>
+            <li><a ng-href="/register">Inscription</a></li>
+            <li><a ng-href="/login">Connexion</a></li>
+            <li><a ng-href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+<div id="middle_home">
+    <div class="ban firstBan">
+        <div class="inlineBlock" id="left">
+            <img class="homeImg" src="../resources/images/home.png" alt="Homme appli">
+
         </div>
+        <div class="inlineBlock" id="right">
+            <div id="logo_blanc">
+                <img class="homeImg" src="../resources/images/Logo_blanc.png" alt="Logo appli blanc">
+            </div>
+            <div class="textCenter" id="slogan">
+                <p>
+                    Apprenez à jouer du piano,
+                    <br> de la guitare ou du ukulele
+                </p>
+            </div>
+            <br>
+            <div id="logo_google">
+                <a href="http://musictoolkit.fr/appget/musictoolkit.apk"><img src="../resources/images/google.png" alt="Logo Google play gris"></a>
+            </div>
+        </div>
+    </div>
+    <div></div>
+</div>
+<div id="icon_home">
+    <div>
+        <h1 class="title">Fonctionnalités :</h1>
+    </div>
+    <div>
+        <a href="#metronome">
+            <img class="metronome" src="../resources/images/btnMetronome.png" alt="Icone metronome">
+        </a>
+    </div>
+    <div>
+        <a href="#chord">
+            <img class="chord" src="../resources/images/btnChords.png" alt="Icone CHord Teacher">
+        </a>
+    </div>
+    <div>
+        <a href="#drjam">
+            <img class="jam" src="../resources/images/btnDrJam.png" alt="Icone Dr Jam">
+        </a>
+    </div>
+    <div>
+        <a href="#playback">
+            <img class="playback" src="../resources/images/icon_playback_generator.png" alt="Icone Playback Generator">
+        </a>
+    </div>
+    <div>
+        <a href="#accordeur">
+            <img class="accordeur" src="../resources/images/btnAccordeur.png" alt="Icone Tuner">
+        </a>
+    </div>
+</div>
+<div id="arrow">
+    <div class="col-12">
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </div>
+</div>
+<div id="fonctionnalitees">
+    <div id="metronome">
+        <img class="fonc_icon" src="../resources/images/btnMetronome.png" alt="Icone metronome">
+        <p class="title_lato"> Metronome </p>
+        <p class="text_body">Un métronome, fonctionnalité de base, permettant de jouer un rythme que pourra suivre le musicien. Il faudra un signal sonore et un signal visuel (pour les instrument trop bruyant, type batterie). Ainsi qu’un paramétrage selon le tempo et le type de mesure (avec signal sonore et visuel différent au premier temps de chaque mesure)</p>
+        <img class="ihm" src="../resources/images/Metronome.png" alt="appli ihm metronome">
+    </div>
+    <div id="playback">
+        <img class="fonc_icon" src="../resources/images/icon_playback_generator.png" alt="Icone Playback Generator">
+        <p class="title_lato"> Playback </p>
+        <p class="text_body">Un générateur de PlayBack, fonctionnalité innovante, qui permettra à l’utilisateur de paramétrer très rapidement une boucle musicale qui sera joué par le téléphone afin de l’accompagner. L’utilisateur pourra paramétrer le tempo, le rythme, les accords et la durée de la boucle, ainsi que l’instrument la jouant.</p>
+        <img class="ihm" src="../resources/images/Playback_Generator.png" alt="appli ihm playback generator">
+    </div>
+    <div id="chord">
+        <img class="fonc_icon" src="../resources/images/btnChords.png" alt="Icone Chord Teacher">
+        <p class="title_lato"> Chord Teacher </p>
+        <p class="text_body">Une bibliothèque d’accords, fonctionnalité assez innovante, recensant tous les accords et gammes existants et comment les jouer (notamment au piano et à la guitare). La fonctionnalité affichera les partitions et/ou les tablatures selon le mode choisit par l’utilisateur.</p>
+        <img class="ihm" src="../resources/images/Chords_Teacher_ukulele.png" alt="chords ihm appli">
+    </div>
+    <div id="accordeur">
+        <img class="fonc_icon" src="../resources/images/btnAccordeur.png" alt="Icone Tuner">
+        <p class="title_lato"> Accordeur </p>
+        <p class="text_body">Un accordeur, fonctionnalité de base, permettant à chaque musicien d’accorder son instrument, de plusieurs façons, de manière chromatique (détection de la note la plus proche et de l’écart avec celle-ci) ou de manière adaptée par instrument (par exemple : accordage spécifique pour guitare ou pour ukulélé).</p>
+        <img class="ihm" src="../resources/images/Accordeur_Chromatique.png" alt="accordeur ihm appli">
+    </div>
+    <div class="col-6 col-centered" id="drjam">
+        <img class="fonc_icon" src="../resources/images/btnDrJam.png" alt="Icone Dr Jam">
+        <p class="title_lato"> Dr Jam </p>
+        <p class="text_body">Une fonctionnalité gamifiée, très innovante (que nous avons appelé DrJam), et qui fera défiler une partition a l’utilisateur, qui devra la jouer simultanément. L’application calculera ensuite la réussite du joueur et lui attribuera un score.</p>
+        <img class="ihm" src="../resources/images/Dr_Jam_playing.png" alt="dr jam ihm appli" style="margin-top: -150px;">
+    </div>
+</div>
+<div id="box-footer">
+    <div>
+        <h1 class="title">Essayez tout de suite !</h1>
+    </div>
+    <div>
+    </div>
+    <div>
+        <div>
+            <div>
+                <a href="http://musictoolkit.fr/appget/musictoolkit.apk"><img src="../resources/images/GooglePlay_noir.png" alt="Logo Google play noir" style="width: 100%;"></a>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary" onclick="location.href=&quot;inscription.php&quot;;">S'INSCRIRE</button>
+            </div>
+        </div>
+    </div>
+    <div>
+    </div>
+</div>
