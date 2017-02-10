@@ -15,6 +15,7 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     margin:0;
+    position:static;
 }
 
 #icon_home {
@@ -170,7 +171,7 @@ ul {
     .navigation {
         display: inline-block;
         top: 5%;
-        font-size: 16px;
+        max-width: 80%;
         li {
             padding: 0 10px 0 10px;
         }
