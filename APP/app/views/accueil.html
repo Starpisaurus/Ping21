@@ -1,5 +1,5 @@
 <div id="bloc-page">
-    <div id="logo">
+    <div class="logoContainer">
         <a ng-href="/">
             <img class="logo" src="../resources/images/Icone_blanc.png" alt="Logo Music Tool Blanc" />
         </a>
@@ -98,11 +98,11 @@
         <p class="text_body">Un accordeur, fonctionnalité de base, permettant à chaque musicien d’accorder son instrument, de plusieurs façons, de manière chromatique (détection de la note la plus proche et de l’écart avec celle-ci) ou de manière adaptée par instrument (par exemple : accordage spécifique pour guitare ou pour ukulélé).</p>
         <img class="ihm" src="../resources/images/Accordeur_Chromatique.png" alt="accordeur ihm appli">
     </div>
-    <div class="col-6 col-centered" id="drjam">
+    <div class="" id="drjam">
         <img class="fonc_icon" src="../resources/images/btnDrJam.png" alt="Icone Dr Jam">
         <p class="title_lato"> Dr Jam </p>
         <p class="text_body">Une fonctionnalité "gamifiée", très innovante (que nous avons appelé DrJam), et qui fait défiler une partition à l’utilisateur, qui la joue simultanément. L’application calcule ensuite la réussite du joueur et lui attribue un score.</p>
-        <img class="ihm" src="../resources/images/Dr_Jam_playing.png" alt="dr jam ihm appli" style="margin-top: -150px;">
+        <img class="ihm" src="../resources/images/Dr_Jam_playing.png" alt="dr jam ihm appli">
     </div>
 </div>
 <div id="box-footer">
@@ -112,12 +112,12 @@
     <div>
         <div>
             <div>
-                <a href="http://musictoolkit.fr/appget/musictoolkit.apk">
+                <a class="largeButton" href="http://musictoolkit.fr/appget/musictoolkit.apk">
                     <img src="../resources/images/google.png" alt="Logo Google play">
                 </a>
             </div>
             <div>
-                <button type="button" class="button largeButton" onclick="location.href=&quot;inscription.php&quot;;">S'INSCRIRE</button>
+                <a type="button" class="button largeButton" ng-href="/register" >S'INSCRIRE</a>
             </div>
         </div>
     </div>

@@ -155,10 +155,11 @@ ul {
     .logo {
         width: 60px !important;
         height: 60px;
+        margin: 15px;
     }
     .logoContainer {
-        width: 100%;
-        display: block;
+        max-width: 20%;
+        display: inline-block;
     }
     #bloc-page{
         margin-bottom: 100px;
@@ -166,6 +167,18 @@ ul {
     .largeIcon{
         margin:25px;
     }
+    .navigation {
+        display: inline-block;
+        top: 5%;
+        font-size: 16px;
+        li {
+            padding: 0 10px 0 10px;
+        }
+    }
+    .largeButton {
+        margin-top: 25px;
+    }
+    
 }
 
 #submit {
