@@ -1,6 +1,6 @@
 'use strict';
 
-var apiUrl = "http://localhost:3333";
+var apiUrl = "http://vps363509.ovh.net:3333";
 
 angular.module('musicToolKitApp')
     .controller('MainCtrl', ['$scope', '$location', function ($scope, $location) {
