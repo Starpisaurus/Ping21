@@ -1,22 +1,24 @@
 <div id="bloc-page">
-    <header>
-        <div id="logo" class="logo">
-            <img class="img" src="../resources/images/Icone_blanc.png" alt="Logo Music Tool Blanc" />
-        </div>
-
-        <nav>
-            <ul>
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="inscription.html">Inscription</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="connexion.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div id="banniere" class="title">
-        <div id="banniere_nom">
-            <h1>Music Toolkit</h1>
-        </div>
+    <div id="logo">
+        <a ng-href="/">
+            <img class="logo" src="../resources/images/Icone_blanc.png" alt="Logo Music Tool Blanc" />
+        </a>
     </div>
+
+    <nav class="navigation">
+        <ul>
+            <li><a ng-href="/">Accueil</a></li>
+            <li><a ng-href="/register">Inscription</a></li>
+            <li><a ng-href="/login">Connexion</a></li>
+            <li><a ng-href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+</div>
+<div id="profilDetails" ng-show="user.isConnected()">
+    <div class="textCenter">Bienvenue {{user.getUser().firstname}} {{user.getUser().lastname}}<br />Vous êtes inscrit depuis le <span ng-bind="user.getUser().register_date | date:'dd MM yyyy'"></span></div>
+</div>
+<div id="error" class="textCenter" ng-hide="user.isConnected()">
+    <p>
+    Une erreur s'est produite, merci de reesayer plus tard, si l'erreur persiste, contacter les administrateurs.</p>
 </div>

@@ -31,3 +31,18 @@ angular.module('musicToolKitApp')
             request: request
         };
   }]);
+
+angular.module('musicToolKitApp').service('Auth', function() {
+    var user = window.user;
+    return {
+        getUser: function() {
+            return window.user;
+        },
+        setUser: function(newUser) {
+            window.user = newUser;
+        },
+        isConnected: function() {
+            return !!window.user;
+        }
+    };
+});

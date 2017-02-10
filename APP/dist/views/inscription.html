@@ -1,6 +1,20 @@
-<a ng-href="/">
-    <img src="../resources/images/Logo_blanc.png" alt="Logo Music Tool" width="222" height="143">
-</a>
+<div id="bloc-page">
+    <div id="logo">
+        <a ng-href="/">
+            <img class="logo" src="../resources/images/Icone_blanc.png" alt="Logo Music Tool Blanc" />
+        </a>
+    </div>
+
+    <nav class="navigation">
+        <ul>
+            <li><a ng-href="/">Accueil</a></li>
+            <li><a ng-href="/register">Inscription</a></li>
+            <li><a ng-href="/login">Connexion</a></li>
+            <li><a ng-href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+</div>
 <div id="conteneur" class="form-block">
     <p id="title"> INSCRIPTION </p>
         <form name="register" method="post"  ng-submit="attempRegister()" accept-charset="utf-8">

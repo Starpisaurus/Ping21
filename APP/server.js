@@ -34,7 +34,7 @@ app.post('/status', function (req, res) {
 
 app.all('/*', function(req, res, next) {
     // Just send the index.html for other files to support HTML5Mode
-    res.sendFile('index.html', { root: path.join(__dirname, 'app') });
+    res.sendFile('index.html', { root: path.join(__dirname, 'app'), user: req.user ? JSON.stringify(req.user.username) : 'null' });
 });
 
 app.listen(app.get('port'), function(err, req, res, next) {

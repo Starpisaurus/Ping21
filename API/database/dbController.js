@@ -86,7 +86,6 @@ function findUser(user, callback) {
                 callback(result);
             });
     });
-    console.log(ret);
 
 }
 

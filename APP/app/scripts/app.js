@@ -34,6 +34,10 @@ angular
             })
             .when('/indexConnected', {
                 templateUrl: 'views/indexconnect.html',
+                controller: 'ProfileCtrl'
+            })
+            .when('/contact', {
+                templateUrl: 'views/contact.html',
             })
             .otherwise({
                 redirectTo: '/'

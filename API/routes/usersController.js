@@ -37,19 +37,22 @@ router.post('/register', function (req, res) {
 router.post('/login', function (req, res) {
     var user = {
         email: req.body.email,
-        password: sha1(req.body.password)
     };
+    var password = sha1(req.body.password);
     console.log(user)
     dbController.findUser(user, function (results) {
 
         var status = 500;
+        var data = {};
         if (results) {
+            console.log('prout');
             console.log(results);
             if (results.length == 1) {
-                console.log(results[0].password);
-                console.log(user.password);
-                if (results[0].password == user.password) {
+                if (results[0].password == password) {
                     status = 200;
+                    data = results[0];
+                    delete data.password;
+                    console.log(user);
                 } else {
                     console.log('Password incorrect');
                     status = 401;
@@ -58,7 +61,7 @@ router.post('/login', function (req, res) {
                 console.log("User doesn't exists in database");
                 status = 404;
             }
-            res.status(status).send();
+            res.status(status).json(data);
         } else {
             console.log(results);
         }
